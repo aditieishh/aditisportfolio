@@ -91,48 +91,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
               </a>
             </div>
 
-            {/* Social Links Bar */}
-            <div className="pt-4 flex items-center justify-center lg:justify-start gap-3">
-              <span className="text-xs font-bold uppercase text-[#8A7A7A] tracking-wider">Connect:</span>
-              
-              <a 
-                href={PERSONAL_INFO.github} 
-                target="_blank" 
-                rel="noreferrer"
-                className="p-2.5 rounded-full bg-white border border-[#F2E8DA] text-[#5C4B4B] hover:text-[#E59A9A] hover:border-[#FFDEDE] shadow-[2px_2px_0px_0px_#F2E8DA] transition-all"
-                title="GitHub Profile"
-              >
-                <Github className="w-4 h-4" />
-              </a>
 
-              <a 
-                href={PERSONAL_INFO.linkedin} 
-                target="_blank" 
-                rel="noreferrer"
-                className="p-2.5 rounded-full bg-white border border-[#F2E8DA] text-[#5C4B4B] hover:text-[#E59A9A] hover:border-[#FFDEDE] shadow-[2px_2px_0px_0px_#F2E8DA] transition-all"
-                title="LinkedIn Profile"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-
-              <a 
-                href={`mailto:${PERSONAL_INFO.email}`}
-                className="p-2.5 rounded-full bg-white border border-[#F2E8DA] text-[#5C4B4B] hover:text-[#E59A9A] hover:border-[#FFDEDE] shadow-[2px_2px_0px_0px_#F2E8DA] transition-all"
-                title="Email Aditi"
-              >
-                <Mail className="w-4 h-4" />
-              </a>
-
-              <a 
-                href={PERSONAL_INFO.leetcode} 
-                target="_blank" 
-                rel="noreferrer"
-                className="p-2.5 rounded-full bg-white border border-[#F2E8DA] text-[#5C4B4B] hover:text-[#E59A9A] hover:border-[#FFDEDE] shadow-[2px_2px_0px_0px_#F2E8DA] transition-all font-mono text-xs font-bold"
-                title="LeetCode Profile"
-              >
-                LC
-              </a>
-            </div>
 
           </div>
 
