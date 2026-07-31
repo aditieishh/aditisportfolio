@@ -60,6 +60,18 @@ ${CERTIFICATIONS_DATA.map(c => `- ${c.title} (${c.provider})`).join('\n')}
           </div>
 
           <div className="flex items-center gap-2">
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-1.5 rounded-full bg-[#E59A9A] hover:bg-[#d88989] text-white text-xs font-extrabold flex items-center gap-1.5 transition-all shadow-[2px_2px_0px_0px_#D9C5B2] cursor-pointer"
+              title="Open Resume directly in Google Drive"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Google Drive Resume</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+
             <button
               onClick={handleCopyText}
               className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-xs font-bold text-white flex items-center gap-1.5 transition-colors cursor-pointer border border-white/20"
@@ -73,7 +85,7 @@ ${CERTIFICATIONS_DATA.map(c => `- ${c.title} (${c.provider})`).join('\n')}
               className="px-3.5 py-1.5 rounded-full bg-[#FFF0F0] text-[#5C4B4B] hover:bg-white text-xs font-extrabold flex items-center gap-1.5 transition-colors border border-[#FFDEDE] cursor-pointer"
             >
               <Printer className="w-3.5 h-3.5 text-[#E59A9A]" />
-              <span>Print / Save PDF</span>
+              <span className="hidden sm:inline">Print / Save PDF</span>
             </button>
 
             <button 
@@ -87,6 +99,41 @@ ${CERTIFICATIONS_DATA.map(c => `- ${c.title} (${c.provider})`).join('\n')}
 
         {/* Printable Resume Document View */}
         <div className="p-6 sm:p-10 text-[#5C4B4B] space-y-6 font-sans text-xs sm:text-sm bg-white print:p-0">
+          
+          {/* Google Drive Embedded PDF Section */}
+          <div className="bg-[#FFF0F0] border border-[#FFDEDE] rounded-2xl p-4 sm:p-5 shadow-[4px_4px_0px_0px_#F2E8DA] space-y-3 print:hidden">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2.5 rounded-xl bg-white border border-[#FFDEDE] text-[#E59A9A]">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="font-extrabold text-sm text-[#5C4B4B]">Google Drive Resume PDF</h4>
+                  <p className="text-xs text-[#8A7A7A]">Official Resume Document</p>
+                </div>
+              </div>
+              <a
+                href={PERSONAL_INFO.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full bg-[#E59A9A] text-white font-extrabold text-xs flex items-center justify-center gap-1.5 hover:bg-[#d88989] transition-all shadow-[2px_2px_0px_0px_#D9C5B2] cursor-pointer"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Open in Google Drive</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            {/* Embedded Google Drive Preview Frame */}
+            <div className="w-full h-[520px] rounded-xl overflow-hidden border border-[#F2E8DA] bg-white shadow-inner">
+              <iframe
+                src="https://drive.google.com/file/d/1UMd1-d36iywI7nM1MtNbJgtVrsnRZlBy/preview"
+                title="Aditi Pallai Resume Google Drive Preview"
+                className="w-full h-full border-0"
+                allow="autoplay"
+              />
+            </div>
+          </div>
           
           {/* Document Header */}
           <div className="border-b-2 border-[#5C4B4B] pb-4 text-center sm:text-left">
