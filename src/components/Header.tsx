@@ -100,17 +100,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenResumeModal }) => {
             })}
           </nav>
 
-          {/* Action Button: Quick Resume Download */}
-          <div className="hidden sm:flex items-center gap-3">
-            <button
-              onClick={onOpenResumeModal}
-              className="bg-[#5C4B4B] text-white px-5 py-2 rounded-full text-xs font-bold shadow-[3px_3px_0px_0px_#D9C5B2] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all flex items-center gap-2 cursor-pointer group"
-            >
-              <FileText className="w-3.5 h-3.5 text-white/90 group-hover:scale-110 transition-transform" />
-              <span>Download Resume</span>
-              <Download className="w-3.5 h-3.5 text-white/80" />
-            </button>
-          </div>
+
 
           {/* Mobile Menu Toggle Button */}
           <div className="flex md:hidden items-center gap-2">
