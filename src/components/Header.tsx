@@ -12,7 +12,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenResumeModal }) => {
   const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
-    { id: 'about', label: 'About', icon: User },
     { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'skills', label: 'Skills', icon: Code },
     { id: 'projects', label: 'Projects', icon: Sparkles },
