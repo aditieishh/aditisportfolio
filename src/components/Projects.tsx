@@ -119,14 +119,34 @@ export const Projects: React.FC = () => {
                 ))}
               </div>
 
-              {/* Interactive Demo Action Button */}
-              <div className="pt-3 border-t border-[#F2E8DA]">
+              {/* Actions: Direct Anchor Links & Sandbox Button */}
+              <div className="pt-3 border-t border-[#F2E8DA] space-y-2">
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-3 rounded-full bg-[#E59A9A] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-[2px_2px_0px_0px_#D9C5B2] hover:bg-[#d88989] transition-all cursor-pointer text-center"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    <span>Live Site</span>
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2 px-3 rounded-full bg-white text-[#5C4B4B] border border-[#F2E8DA] font-bold text-xs flex items-center justify-center gap-1.5 shadow-[2px_2px_0px_0px_#F2E8DA] hover:bg-[#FFF0F0] hover:text-[#E59A9A] transition-all cursor-pointer text-center"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    <span>GitHub</span>
+                  </a>
+                </div>
                 <button
                   onClick={() => setSelectedDemoProject(project)}
-                  className="w-full py-2.5 px-4 rounded-full bg-[#5C4B4B] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[3px_3px_0px_0px_#D9C5B2] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all cursor-pointer"
+                  className="w-full py-2 px-4 rounded-full bg-[#5C4B4B] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[2px_2px_0px_0px_#D9C5B2] hover:bg-[#4d3e3e] transition-all cursor-pointer"
                 >
-                  <Play className="w-3.5 h-3.5 fill-current" />
-                  <span>Test Live Sandbox Demo</span>
+                  <Play className="w-3 h-3 fill-current" />
+                  <span>Interactive Sandbox</span>
                 </button>
               </div>
 

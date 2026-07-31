@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Project } from '../types';
-import { X, Play, Copy, Check, Sparkles, Terminal, Globe, Code2, Cpu, ExternalLink, RefreshCw, Layers } from 'lucide-react';
+import { X, Play, Copy, Check, Sparkles, Terminal, Globe, Code2, Cpu, ExternalLink, RefreshCw, Layers, Github } from 'lucide-react';
 
 interface InteractiveDemoModalProps {
   project: Project | null;
@@ -25,7 +25,7 @@ export const InteractiveDemoModal: React.FC<InteractiveDemoModalProps> = ({ proj
 
   // Orvexa Code Editor States
   const [editorCode, setEditorCode] = useState<string>(
-    `// Orvexa Real-Time Collaborative Workspace\n// Room: #ORV-7892 (Connected Users: 3)\n\nimport { io } from 'socket.io-client';\n\nconst socket = io('https://orvexa-code-editor.onrender.com');\nsocket.emit('join-room', { roomId: 'ORV-7892' });\n\nconsole.log('Synchronized with peer cursors!');`
+    `// Orvexa Real-Time Collaborative Workspace\n// Room: #ORV-7892 (Connected Users: 3)\n\nimport { io } from 'socket.io-client';\n\nconst socket = io('https://orvexa-2.onrender.com');\nsocket.emit('join-room', { roomId: 'ORV-7892' });\n\nconsole.log('Synchronized with peer cursors!');`
   );
   const [activePeers, setActivePeers] = useState<number>(3);
 
@@ -73,12 +73,34 @@ export const InteractiveDemoModal: React.FC<InteractiveDemoModalProps> = ({ proj
             </div>
           </div>
 
-          <button 
-            onClick={onClose}
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white cursor-pointer"
-          >
-            <X className="w-5 h-5" />
-          </button>
+          <div className="flex items-center gap-2">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-full bg-[#E59A9A] text-white text-xs font-bold flex items-center gap-1 hover:bg-[#d88989] transition-colors"
+              title="Open Live Web Application"
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Live Site</span>
+            </a>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold flex items-center gap-1 border border-white/20 transition-colors"
+              title="View GitHub Repository"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">GitHub</span>
+            </a>
+            <button 
+              onClick={onClose}
+              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white cursor-pointer ml-1"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Modal Body */}

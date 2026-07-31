@@ -24,7 +24,7 @@ export const PROJECTS_DATA: Project[] = [
     longDescription: "Orvexa empowers developers to code together synchronously in isolated rooms with syntax highlighting, custom theme support, and room-based session management.",
     category: "Real-Time",
     githubUrl: "https://github.com/aditieishh/Orvexa",
-    liveUrl: "https://orvexa-code-editor.onrender.com",
+    liveUrl: "https://orvexa-2.onrender.com",
     technologies: ["React.js", "Node.js", "Express.js", "Socket.io", "JavaScript", "HTML5", "CSS3"],
     keyHighlights: [
       "WebSocket-based synchronization via Socket.io broadcasting live edits and cursor updates",
@@ -62,7 +62,7 @@ export const PROJECTS_DATA: Project[] = [
     longDescription: "Features automatic unique hash generation, instant short link copying, usage metrics, and fast redirection middleware.",
     category: "Full Stack",
     githubUrl: "https://github.com/aditieishh/url-shortener",
-    liveUrl: "https://url-shortener-app.onrender.com",
+    liveUrl: "https://frontend-kzzz.onrender.com",
     technologies: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "REST APIs", "JavaScript"],
     keyHighlights: [
       "RESTful Backend APIs for short code generation and instant URL redirection mapping",
