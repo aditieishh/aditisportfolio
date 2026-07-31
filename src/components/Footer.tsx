@@ -63,13 +63,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Copyright & Palette Tag */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#8A7A7A] font-bold">
-          <p>&copy; {new Date().getFullYear()} Aditi Pallai. Built with React & Tailwind CSS.</p>
-          <div className="flex items-center gap-1 text-[#E59A9A]">
-            <span>Professional Polish Theme</span>
-            <Heart className="w-3.5 h-3.5 fill-current text-[#E59A9A] inline" />
-          </div>
-        </div>
+        
 
       </div>
     </footer>
