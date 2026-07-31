@@ -118,32 +118,7 @@ export const Contact: React.FC = () => {
               </div>
 
               {/* Social Media Profile Cards */}
-              <div className="pt-2 border-t border-[#F2E8DA] space-y-3">
-                <span className="text-xs font-extrabold text-[#8A7A7A] uppercase tracking-wider">Social Profiles</span>
-                <div className="grid grid-cols-2 gap-2">
-                  {SOCIAL_LINKS.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="p-3 bg-white hover:bg-[#FFF0F0] border border-[#F2E8DA] shadow-[2px_2px_0px_0px_#F2E8DA] rounded-xl flex items-center gap-2.5 text-[#5C4B4B] hover:text-[#E59A9A] transition-all group"
-                    >
-                      <span className="text-[#E59A9A] group-hover:scale-110 transition-transform">
-                        {getSocialIcon(link.icon)}
-                      </span>
-                      <div className="overflow-hidden">
-                        <div className="text-xs font-bold truncate">{link.name}</div>
-                        <div className="text-[10px] text-[#8A7A7A] truncate">{link.handle}</div>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-          </div>
+              
 
           {/* Right Column: Interactive Form (7 Cols) */}
           <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-[#F2E8DA] shadow-[4px_4px_0px_0px_#F2E8DA] relative overflow-hidden">
