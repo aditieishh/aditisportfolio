@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  body {
+    background-color: #FFFBFB;
+    color: #5C4B4B;
+    overflow-x: hidden;
+  }
+}
+
+/* Professional Polish Custom Utilities */
+.polish-card {
+  background-color: #FFFFFF;
+  border: 1px solid #F2E8DA;
+  box-shadow: 4px 4px 0px 0px #F2E8DA;
+  border-radius: 1.5rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.polish-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #EBD8C3;
+}
+
+.polish-btn {
+  background-color: #5C4B4B;
+  color: #FFFFFF;
+  box-shadow: 3px 3px 0px 0px #D9C5B2;
+  transition: all 0.2s ease;
+}
+
+.polish-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px #D9C5B2;
+}
+
+.polish-btn-pink {
+  background-color: #E59A9A;
+  color: #FFFFFF;
+  box-shadow: 3px 3px 0px 0px #D9C5B2;
+  transition: all 0.2s ease;
+}
+
+.polish-btn-pink:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px 0px #D9C5B2;
+}
+
+/* Custom 3D Perspective and Soft Pink Aesthetics */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Custom Soft Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDF8F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E59A9A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D88282;
+}
+
