@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { PERSONAL_INFO, SOCIAL_LINKS } from '../data/portfolioData';
-import { Send, Mail, Phone, MapPin, CheckCircle, Copy, Check, Github, Linkedin, Code } from 'lucide-react';
+import { PERSONAL_INFO } from '../data/portfolioData';
+import { Send, Mail, Phone, MapPin, CheckCircle, Copy, Check } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -27,15 +27,6 @@ export const Contact: React.FC = () => {
     navigator.clipboard.writeText(PERSONAL_INFO.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
-  };
-
-  const getSocialIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Github': return <Github className="w-5 h-5" />;
-      case 'Linkedin': return <Linkedin className="w-5 h-5" />;
-      case 'Mail': return <Mail className="w-5 h-5" />;
-      default: return <Code className="w-5 h-5" />;
-    }
   };
 
   return (
@@ -117,8 +108,9 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
 
-              {/* Social Media Profile Cards */}
-              
+            </div>
+
+          </div>
 
           {/* Right Column: Interactive Form (7 Cols) */}
           <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-[#F2E8DA] shadow-[4px_4px_0px_0px_#F2E8DA] relative overflow-hidden">
