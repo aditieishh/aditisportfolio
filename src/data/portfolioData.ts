@@ -81,33 +81,33 @@ export const SKILLS_CATEGORIES: SkillCategory[] = [
     title: "Languages",
     iconName: "Code2",
     skills: [
-      { name: "Java", level: 90, badge: "OOP & DSA" },
-      { name: "Python", level: 85, badge: "ML & Scripting" },
-      { name: "JavaScript (ES6+)", level: 92, badge: "Async & Modern JS" },
-      { name: "SQL", level: 88, badge: "Queries & Joins" },
-      { name: "HTML5 & CSS3", level: 95, badge: "Responsive UI" }
+      { name: "Java",  badge: "OOP & DSA" },
+      { name: "Python",  badge: "Language" },
+      { name: "JavaScript (ES6+)",  badge: "Async & Modern JS" },
+      { name: "SQL",  badge: "Queries & Joins" },
+      { name: "HTML5 & CSS3",  badge: "Responsive UI" }
     ]
   },
   {
     title: "Web & Backend Development",
     iconName: "Server",
     skills: [
-      { name: "React.js", level: 90, badge: "Frontend Framework" },
-      { name: "Node.js", level: 88, badge: "Runtime Environment" },
-      { name: "Express.js", level: 88, badge: "REST Framework" },
-      { name: "REST APIs", level: 92, badge: "Architecture" },
-      { name: "Fast API", level: 85, badge: "Real-Time Comms" },
-      { name: "Tailwind CSS", level: 90, badge: "Utility-First Styling" }
+      { name: "React.js",  badge: "Frontend Framework" },
+      { name: "Node.js",  badge: "Runtime Environment" },
+      { name: "Express.js",  badge: "REST Framework" },
+      { name: "REST APIs", badge: "Architecture" },
+      { name: "Fast API",  badge: "Real-Time Comms" },
+      { name: "Tailwind CSS",  badge: "Utility-First Styling" }
     ]
   },
   {
     title: "Databases & Cloud",
     iconName: "Database",
     skills: [
-      { name: "MongoDB", level: 85, badge: "NoSQL & Mongoose" },
-      { name: "MySQL", level: 85, badge: "Relational Schema" },
-      { name: "Vercel", level: 88, badge: "Frontend Deployment" },
-      { name: "Render", level: 88, badge: "Backend Hosting" }
+      { name: "MongoDB",  badge: "NoSQL & Mongoose" },
+      { name: "MySQL",  badge: "Relational Schema" },
+      { name: "Vercel",  badge: "Frontend Deployment" },
+      { name: "Render",  badge: "Backend Hosting" }
     ]
   },
   
@@ -115,22 +115,22 @@ export const SKILLS_CATEGORIES: SkillCategory[] = [
     title: "Tools & Developer Platforms",
     iconName: "Wrench",
     skills: [
-      { name: "Git & GitHub", level: 92, badge: "Version Control" },
-      { name: "Jupyter Notebook", level: 85, badge: "Data Analysis" },
-      { name: "Google Colab", level: 85, badge: "Cloud ML Notebooks" },
-      { name: "Gemini API", level: 88, badge: "LLM Integration" }
+      { name: "Git & GitHub",  badge: "Version Control" },
+      { name: "Jupyter Notebook",  badge: "Data Analysis" },
+      { name: "Google Colab",  badge: "Cloud ML Notebooks" },
+      { name: "Gemini API",  badge: "LLM Integration" }
     ]
   },
   {
     title: "Core Computer Science",
     iconName: "BookOpen",
     skills: [
-      { name: "Data Structures & Algorithms", level: 92, badge: "100+ LeetCode Solved" },
-      { name: "Object-Oriented Programming (OOP)", level: 90, badge: "Solid Design" },
-      { name: "Database Management Systems (DBMS)", level: 88, badge: "Relational & NoSQL" },
-      { name: "Operating Systems", level: 85, badge: "Process & Threads" },
-      { name: "Computer Networks", level: 85, badge: "TCP/IP & HTTP" },
-      { name: "System Design", level: 85, badge: "Architecture" },
+      { name: "Data Structures & Algorithms",  badge: "100+ LeetCode Solved" },
+      { name: "Object-Oriented Programming (OOP)",  badge: "Solid Design" },
+      { name: "Database Management Systems (DBMS)",  badge: "Relational & NoSQL" },
+      { name: "Operating Systems",  badge: "Process & Threads" },
+      { name: "Computer Networks",  badge: "TCP/IP & HTTP" },
+      { name: "System Design",  badge: "Architecture" },
       
     ]
   }
