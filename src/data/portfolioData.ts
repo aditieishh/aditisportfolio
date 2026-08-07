@@ -11,7 +11,7 @@ export const PERSONAL_INFO = {
   githubUsername: "aditieishh",
   linkedin: "https://linkedin.com/in/aditi-pallai",
   leetcode: "https://leetcode.com/u/aditipallai2",
-  resumeUrl: "https://drive.google.com/file/d/1UMd1-d36iywI7nM1MtNbJgtVrsnRZlBy/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/11fgYRFQqcAlS2fbXnqLRznl57RfTrSUR/view?usp=sharing",
   status: "Seeking SDE / Full Stack Developer Roles",
   about: `Software Development Engineer aspirant with hands-on development experience building real-time, API-driven web applications. Strong foundation in Data Structures, Algorithms, OOP,System Design and Database Management. Passionate about engineering clean, scalable, production-grade software with seamless user experiences.`,
 };
