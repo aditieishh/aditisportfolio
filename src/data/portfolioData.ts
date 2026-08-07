@@ -13,7 +13,7 @@ export const PERSONAL_INFO = {
   leetcode: "https://leetcode.com/u/aditipallai2",
   resumeUrl: "https://drive.google.com/file/d/1UMd1-d36iywI7nM1MtNbJgtVrsnRZlBy/view?usp=sharing",
   status: "Seeking SDE / Full Stack Developer Roles",
-  about: `Software Development Engineer aspirant with hands-on full-stack development experience building real-time, REST API-driven web applications. Strong foundation in Data Structures, Algorithms, OOP, and Database Management. Passionate about engineering clean, scalable, production-grade software with seamless user experiences.`,
+  about: `Software Development Engineer aspirant with hands-on development experience building real-time, API-driven web applications. Strong foundation in Data Structures, Algorithms, OOP,System Design and Database Management. Passionate about engineering clean, scalable, production-grade software with seamless user experiences.`,
 };
 
 export const PROJECTS_DATA: Project[] = [
@@ -96,7 +96,7 @@ export const SKILLS_CATEGORIES: SkillCategory[] = [
       { name: "Node.js", level: 88, badge: "Runtime Environment" },
       { name: "Express.js", level: 88, badge: "REST Framework" },
       { name: "REST APIs", level: 92, badge: "Architecture" },
-      { name: "WebSockets / Socket.io", level: 85, badge: "Real-Time Comms" },
+      { name: "Fast API", level: 85, badge: "Real-Time Comms" },
       { name: "Tailwind CSS", level: 90, badge: "Utility-First Styling" }
     ]
   },
@@ -110,17 +110,7 @@ export const SKILLS_CATEGORIES: SkillCategory[] = [
       { name: "Render", level: 88, badge: "Backend Hosting" }
     ]
   },
-  {
-    title: "Data Science & Machine Learning",
-    iconName: "Cpu",
-    skills: [
-      { name: "Pandas", level: 80, badge: "Data Wrangling" },
-      { name: "NumPy", level: 80, badge: "Numerical Computing" },
-      { name: "Scikit-learn", level: 78, badge: "Predictive Models" },
-      { name: "Machine Learning", level: 78, badge: "Fundamentals" },
-      { name: "Tableau", level: 75, badge: "Data Visualization" }
-    ]
-  },
+  
   {
     title: "Tools & Developer Platforms",
     iconName: "Wrench",
@@ -139,7 +129,9 @@ export const SKILLS_CATEGORIES: SkillCategory[] = [
       { name: "Object-Oriented Programming (OOP)", level: 90, badge: "Solid Design" },
       { name: "Database Management Systems (DBMS)", level: 88, badge: "Relational & NoSQL" },
       { name: "Operating Systems", level: 85, badge: "Process & Threads" },
-      { name: "Computer Networks", level: 85, badge: "TCP/IP & HTTP" }
+      { name: "Computer Networks", level: 85, badge: "TCP/IP & HTTP" },
+      { name: "System Design", level: 85, badge: "Architecture" },
+      
     ]
   }
 ];
