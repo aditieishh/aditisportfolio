@@ -11,9 +11,9 @@ export const PERSONAL_INFO = {
   githubUsername: "aditieishh",
   linkedin: "https://linkedin.com/in/aditi-pallai",
   leetcode: "https://leetcode.com/u/aditipallai2",
-  resumeUrl: "https://drive.google.com/file/d/11fgYRFQqcAlS2fbXnqLRznl57RfTrSUR/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1UMd1-d36iywI7nM1MtNbJgtVrsnRZlBy/view?usp=sharing",
   status: "Seeking SDE / Full Stack Developer Roles",
-  about: `Software Development Engineer aspirant with hands-on development experience building real-time, API-driven web applications. Strong foundation in Data Structures, Algorithms, OOP,System Design and Database Management. Passionate about engineering clean, scalable, production-grade software with seamless user experiences.`,
+  about: `Software Development Engineer aspirant with hands-on full-stack development experience building real-time, REST API-driven web applications. Strong foundation in Data Structures, Algorithms, OOP, and Database Management. Passionate about engineering clean, scalable, production-grade software with seamless user experiences.`,
 };
 
 export const PROJECTS_DATA: Project[] = [
@@ -73,6 +73,25 @@ export const PROJECTS_DATA: Project[] = [
     ],
     featured: true,
     demoType: "url-shortener"
+  },
+  {
+    id: "story-generator",
+    title: "Story Generator",
+    subtitle: "Full-Stack Interactive LLM Story Platform",
+    description: "Full-stack interactive story generator using FastAPI, React, and LLM-based generation with an async job-queue architecture and structured narrative tree schema.",
+    longDescription: "Engineered an interactive branching narrative app using FastAPI, React, and LLMs. Built an async job-queue architecture (background tasks + polling) to maintain high API responsiveness during multi-second LLM calls. Supports multi-provider LLMs (Ollama local dev, Gemini API production) with LangChain PydanticOutputParser for validated structured schemas and SQLite recursive story trees via SQLAlchemy.",
+    category: "AI Powered",
+    githubUrl: "https://github.com/aditieishh/story_generator",
+    liveUrl: "https://story-generator-frontend-s17d.onrender.com/",
+    technologies: ["React.js", "FastAPI", "LangChain", "Ollama (llama3.2)", "Google Gemini API", "SQLAlchemy", "SQLite", "REST APIs"],
+    keyHighlights: [
+      "Built a full-stack interactive story generator using FastAPI, React, and LLM-based generation, with an async job-queue architecture (background tasks + polling) so the API stays responsive during multi-second generation calls",
+      "Implemented multi-provider LLM support, local inference via Ollama for development, Google Gemini API for production using LangChain's PydanticOutputParser to enforce a validated, structured story schema",
+      "Modeled branching story data as a recursive node tree in SQLite via SQLAlchemy, supporting winning and losing narrative paths",
+      "Diagnosed and resolved a chain of production issues independently — CORS misconfiguration, stale DB schema, and a deprecated model version deploying frontend and backend separately on Render"
+    ],
+    featured: true,
+    demoType: "story-generator"
   }
 ];
 
@@ -81,57 +100,65 @@ export const SKILLS_CATEGORIES: SkillCategory[] = [
     title: "Languages",
     iconName: "Code2",
     skills: [
-      { name: "Java",  badge: "OOP & DSA" },
-      { name: "Python",  badge: "Language" },
-      { name: "JavaScript (ES6+)",  badge: "Async & Modern JS" },
-      { name: "SQL",  badge: "Queries & Joins" },
-      { name: "HTML5 & CSS3",  badge: "Responsive UI" }
+      { name: "Java", level: 90, badge: "OOP & DSA" },
+      { name: "Python", level: 85, badge: "ML & Scripting" },
+      { name: "JavaScript (ES6+)", level: 92, badge: "Async & Modern JS" },
+      { name: "SQL", level: 88, badge: "Queries & Joins" },
+      { name: "HTML5 & CSS3", level: 95, badge: "Responsive UI" }
     ]
   },
   {
     title: "Web & Backend Development",
     iconName: "Server",
     skills: [
-      { name: "React.js",  badge: "Frontend Framework" },
-      { name: "Node.js",  badge: "Runtime Environment" },
-      { name: "Express.js",  badge: "REST Framework" },
-      { name: "REST APIs", badge: "Architecture" },
-      { name: "Fast API",  badge: "Real-Time Comms" },
-      { name: "Tailwind CSS",  badge: "Utility-First Styling" }
+      { name: "React.js", level: 90, badge: "Frontend Framework" },
+      { name: "Node.js", level: 88, badge: "Runtime Environment" },
+      { name: "Express.js", level: 88, badge: "REST Framework" },
+      { name: "REST APIs", level: 92, badge: "Architecture" },
+      { name: "WebSockets / Socket.io", level: 85, badge: "Real-Time Comms" },
+      { name: "Tailwind CSS", level: 90, badge: "Utility-First Styling" }
     ]
   },
   {
     title: "Databases & Cloud",
     iconName: "Database",
     skills: [
-      { name: "MongoDB",  badge: "NoSQL & Mongoose" },
-      { name: "MySQL",  badge: "Relational Schema" },
-      { name: "Vercel",  badge: "Frontend Deployment" },
-      { name: "Render",  badge: "Backend Hosting" }
+      { name: "MongoDB", level: 85, badge: "NoSQL & Mongoose" },
+      { name: "MySQL", level: 85, badge: "Relational Schema" },
+      { name: "Vercel", level: 88, badge: "Frontend Deployment" },
+      { name: "Render", level: 88, badge: "Backend Hosting" }
     ]
   },
-  
+  {
+    title: "Data Science & Machine Learning",
+    iconName: "Cpu",
+    skills: [
+      { name: "Pandas", level: 80, badge: "Data Wrangling" },
+      { name: "NumPy", level: 80, badge: "Numerical Computing" },
+      { name: "Scikit-learn", level: 78, badge: "Predictive Models" },
+      { name: "Machine Learning", level: 78, badge: "Fundamentals" },
+      { name: "Tableau", level: 75, badge: "Data Visualization" }
+    ]
+  },
   {
     title: "Tools & Developer Platforms",
     iconName: "Wrench",
     skills: [
-      { name: "Git & GitHub",  badge: "Version Control" },
-      { name: "Jupyter Notebook",  badge: "Data Analysis" },
-      { name: "Google Colab",  badge: "Cloud ML Notebooks" },
-      { name: "Gemini API",  badge: "LLM Integration" }
+      { name: "Git & GitHub", level: 92, badge: "Version Control" },
+      { name: "Jupyter Notebook", level: 85, badge: "Data Analysis" },
+      { name: "Google Colab", level: 85, badge: "Cloud ML Notebooks" },
+      { name: "Gemini API", level: 88, badge: "LLM Integration" }
     ]
   },
   {
     title: "Core Computer Science",
     iconName: "BookOpen",
     skills: [
-      { name: "Data Structures & Algorithms",  badge: "100+ LeetCode Solved" },
-      { name: "Object-Oriented Programming (OOP)",  badge: "Solid Design" },
-      { name: "Database Management Systems (DBMS)",  badge: "Relational & NoSQL" },
-      { name: "Operating Systems",  badge: "Process & Threads" },
-      { name: "Computer Networks",  badge: "TCP/IP & HTTP" },
-      { name: "System Design",  badge: "Architecture" },
-      
+      { name: "Data Structures & Algorithms", level: 92, badge: "100+ LeetCode Solved" },
+      { name: "Object-Oriented Programming (OOP)", level: 90, badge: "Solid Design" },
+      { name: "Database Management Systems (DBMS)", level: 88, badge: "Relational & NoSQL" },
+      { name: "Operating Systems", level: 85, badge: "Process & Threads" },
+      { name: "Computer Networks", level: 85, badge: "TCP/IP & HTTP" }
     ]
   }
 ];
