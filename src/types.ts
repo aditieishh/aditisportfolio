@@ -10,7 +10,7 @@ export interface Project {
   technologies: string[];
   keyHighlights: string[];
   featured?: boolean;
-  demoType?: 'code-editor' | 'url-shortener' | 'ai-reviewer';
+  demoType?: 'code-editor' | 'url-shortener' | 'ai-reviewer' | 'story-generator';
 }
 
 export interface SkillCategory {
