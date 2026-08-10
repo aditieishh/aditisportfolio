@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Project } from '../types';
-import { X, Play, Copy, Check, Sparkles, Terminal, Globe, Code2, Cpu, ExternalLink, RefreshCw, Layers, Github } from 'lucide-react';
+import { X, Play, Copy, Check, Sparkles, Terminal, Globe, Code2, Cpu, ExternalLink, RefreshCw, Layers, Github, BookOpen, GitBranch, Bot } from 'lucide-react';
 
 interface InteractiveDemoModalProps {
   project: Project | null;
@@ -28,6 +28,57 @@ export const InteractiveDemoModal: React.FC<InteractiveDemoModalProps> = ({ proj
     `// Orvexa Real-Time Collaborative Workspace\n// Room: #ORV-7892 (Connected Users: 3)\n\nimport { io } from 'socket.io-client';\n\nconst socket = io('https://orvexa-2.onrender.com');\nsocket.emit('join-room', { roomId: 'ORV-7892' });\n\nconsole.log('Synchronized with peer cursors!');`
   );
   const [activePeers, setActivePeers] = useState<number>(3);
+
+  // Story Generator Demo States
+  const [storyGenre, setStoryGenre] = useState<string>('Sci-Fi Cyberpunk');
+  const [storyGenerating, setStoryGenerating] = useState<boolean>(false);
+  const [jobStep, setJobStep] = useState<string>('');
+  const [activeStoryNode, setActiveStoryNode] = useState<{
+    chapter: string;
+    narrative: string;
+    choices: { text: string; actionKey: string }[];
+  }>({
+    chapter: "Node 0 (Root Narrative Seed)",
+    narrative: "You awaken in Neon City 2099. An encrypted signal flickers on your cyberdeck console from an unknown AI entity requesting immediate assistance.",
+    choices: [
+      { text: "Option A: Decrypt the signal payload and accept the quest", actionKey: "decrypt" },
+      { text: "Option B: Trace the source IP and activate automated icebreakers", actionKey: "trace" }
+    ]
+  });
+
+  const handleSimulateStoryGeneration = (actionKey: string) => {
+    setStoryGenerating(true);
+    setJobStep('FastAPI Background Task Enqueued (#job_8f29)...');
+    setTimeout(() => {
+      setJobStep('LangChain + Gemini API: Running PydanticOutputParser schema validation...');
+    }, 700);
+    setTimeout(() => {
+      setJobStep('Persisting recursive tree node branch to SQLite via SQLAlchemy...');
+    }, 1400);
+    setTimeout(() => {
+      setStoryGenerating(false);
+      setJobStep('');
+      if (actionKey === 'decrypt') {
+        setActiveStoryNode({
+          chapter: "Node 1.A (Branch: Decrypted Payload)",
+          narrative: "The decrypted payload reveals a rogue neural core trapped inside a corporate mainframe. It offers you 50,000 crypto credits to bypass the firewall locks.",
+          choices: [
+            { text: "Option A1: Override security protocols and free the core", actionKey: "override" },
+            { text: "Option A2: Alert corporate counter-hackers and lock the channel", actionKey: "alert" }
+          ]
+        });
+      } else {
+        setActiveStoryNode({
+          chapter: "Node 1.B (Branch: IP Trace Pulse)",
+          narrative: "Your IP tracer pulse targets an underground server facility in District 7. Power grid fluctuations ripple through the alley as security drones deploy.",
+          choices: [
+            { text: "Option B1: Hack drone broadcast frequencies", actionKey: "hack_drones" },
+            { text: "Option B2: Retreat through shadows and divert power", actionKey: "divert_power" }
+          ]
+        });
+      }
+    }, 2100);
+  };
 
   const handleSimulateReview = () => {
     setReviewing(true);
@@ -276,6 +327,63 @@ export const InteractiveDemoModal: React.FC<InteractiveDemoModalProps> = ({ proj
                   rows={6}
                   className="w-full p-4 bg-transparent text-white focus:outline-none resize-none"
                 />
+              </div>
+            </div>
+          )}
+
+          {/* DEMO TYPE 4: Story Generator */}
+          {project.demoType === 'story-generator' && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-extrabold text-[#5C4B4B] flex items-center gap-1.5">
+                  <BookOpen className="w-4 h-4 text-[#E59A9A]" />
+                  <span>FastAPI + LangChain LLM Story Generator Sandbox</span>
+                </span>
+                <span className="text-xs text-[#E59A9A] bg-[#FFF0F0] border border-[#FFDEDE] px-2.5 py-1 rounded-full font-bold flex items-center gap-1">
+                  <GitBranch className="w-3 h-3" />
+                  <span>Recursive Tree Schema</span>
+                </span>
+              </div>
+
+              {/* Active Story Node Box */}
+              <div className="bg-[#FFF0F0] border border-[#FFDEDE] rounded-xl p-4 space-y-3 shadow-[2px_2px_0px_0px_#D9C5B2]">
+                <div className="flex items-center justify-between border-b border-[#FFDEDE] pb-2 text-xs font-bold text-[#5C4B4B]">
+                  <span className="text-[#E59A9A] font-mono">{activeStoryNode.chapter}</span>
+                  <span className="text-[11px] text-[#8A7A7A]">Genre: {storyGenre}</span>
+                </div>
+
+                <p className="text-xs sm:text-sm text-[#5C4B4B] font-medium leading-relaxed bg-white p-3 rounded-lg border border-[#F2E8DA]">
+                  {activeStoryNode.narrative}
+                </p>
+
+                {/* Job Async Status Indicator */}
+                {storyGenerating && (
+                  <div className="p-3 bg-[#5C4B4B] text-white rounded-lg font-mono text-xs space-y-1 animate-in fade-in border border-[#F2E8DA]">
+                    <div className="flex items-center gap-2 text-[#E59A9A] font-bold">
+                      <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                      <span>Async Job Queue Running (Polling API...)</span>
+                    </div>
+                    <div className="text-[11px] text-[#FFDEDE]">{jobStep}</div>
+                  </div>
+                )}
+
+                {/* Choice Branching Buttons */}
+                {!storyGenerating && (
+                  <div className="space-y-2 pt-1">
+                    <span className="text-[11px] font-extrabold text-[#8A7A7A] uppercase tracking-wider">Select Branch Choice:</span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {activeStoryNode.choices.map((choice, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => handleSimulateStoryGeneration(choice.actionKey)}
+                          className="p-2.5 rounded-xl bg-white hover:bg-[#FFF0F0] border border-[#F2E8DA] hover:border-[#FFDEDE] text-[#5C4B4B] hover:text-[#E59A9A] text-xs font-bold text-left transition-all cursor-pointer shadow-xs hover:shadow-[2px_2px_0px_0px_#D9C5B2]"
+                        >
+                          {choice.text}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           )}
